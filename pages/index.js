@@ -5,10 +5,6 @@ import { useState } from "react";
 export default function Home() {
   const [menu, setMenu] = useState(false);
 
-  if (menu) {
-  } else {
-  }
-
   return (
     <div className="container">
       <nav className="nav">
