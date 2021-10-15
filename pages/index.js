@@ -20,13 +20,13 @@ export default function Home() {
         <div className="nav__right">
           <ul>
             <li>
-              <a>Anime</a>
+              <a>Product</a>
             </li>
             <li>
-              <a>Manga</a>
+              <a>Hosting</a>
             </li>
             <li>
-              <a>Movies</a>
+              <a>Web App</a>
             </li>
           </ul>
           <div
@@ -36,6 +36,19 @@ export default function Home() {
             <span></span>
             <span></span>
             <span></span>
+          </div>
+          <div className={`nav__overlay ${menu ? "slide" : ""}`}>
+            <ul>
+              <li>
+                <a>Product</a>
+              </li>
+              <li>
+                <a>Hosting</a>
+              </li>
+              <li>
+                <a>Web App</a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>

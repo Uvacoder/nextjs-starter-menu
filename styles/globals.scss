@@ -48,6 +48,10 @@ a {
   }
 }
 
+.nav__overlay {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   .nav__right {
     ul {
@@ -59,6 +63,7 @@ a {
       align-items: center;
       flex-direction: column;
       cursor: pointer;
+      z-index: 2;
       span {
         background-color: #000;
         width: 1.5rem;
@@ -71,6 +76,9 @@ a {
     }
 
     .nav__mobile.open {
+      span {
+        background-color: #fff;
+      }
       span:nth-child(1) {
         transform: rotate(45deg) translate(2px, -1px);
       }
@@ -80,6 +88,40 @@ a {
       span:nth-child(3) {
         transform: rotate(-45deg) translate(2px, -1px);
       }
+    }
+
+    .nav__overlay {
+      display: block !important;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transition: all 0.4s ease;
+      transform-origin: 0 0;
+      transform: translateX(-100vw);
+      background-color: #000;
+
+      ul {
+        display: flex !important;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        list-style: none;
+        padding-left: 0px;
+        margin-top: 40vh;
+        color: #fff;
+        li {
+          padding: 1rem;
+        }
+      }
+    }
+
+    .nav__overlay.slide {
+      transform: translateX(0vw) !important;
     }
   }
 }
